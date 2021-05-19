@@ -1,0 +1,90 @@
+
+.skills{
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+  color: #eeeded;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.skill-text{
+  font-size: 20px;
+}
+
+.skill-name{
+  font-size: 18px;
+  font-weight: 700px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}   
+
+.skill-bar{
+  height: 20px 0;
+  background: #435560;
+  border-radius: 8px;
+}
+
+.skill-per{
+  height: 20px;
+  background-color: #BFD1E5;
+  border-radius: 8px;
+  width: 0;
+  transition: 1s linear; 
+  position: relative;
+}
+
+.skill-per::before{
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background-color: black;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 4px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  top: -16px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px; 
+     
+}
+
+
+div.row{
+  clear: both;
+  margin: 40px 60px;
+}
+div.row::after{
+  clear: both;
+  content: "";
+  display: table;
+}
+ 
+ /* Grid Columns Styles */
+ 
+div[class^="col-"]{
+  float: left;
+}
+
+
+/* div.col-1-1{width:100%}
+div.col-1-2{width:50%}
+div.col-1-3{width:33%} this will be used for the testimonials
+div.col-1-4{width:25%} */
+div.col-1-1{width:100%;}
+div.col-1-3{width: 33%}
+div.col-1-5{width: 20%}
+div.col-1-2{width: 50%}
+
+

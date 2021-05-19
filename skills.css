@@ -9,13 +9,6 @@ body{
 
 
 
-/* image adjusmnet */
-.skills-img{
-  width: 40%;
-  height: 20%;
-  border-radius: 15px;
-}
-
 /* typewriter adjustment */
 .line{
   position: relative;

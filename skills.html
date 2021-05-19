@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="bars.css">
     <title>Brandons Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+
     <header>
         <a class="logo" href="index.html">Brandon Santizo</a>
         <nav>
@@ -25,8 +28,91 @@
     <h2 class="line anim-typewriter">My Skills</h1>
     <br>
 
-    <img src="skills.jpeg" class="skills-img"  alt="rubix cube sitting on old book">
+    <div class="row">
+        <div class="col-1-2">
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="80"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="80"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-name">Javascript</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="30"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-name">Ruby</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1-2">
+            <h2>Knowledge, Skills, and Abilities:</h2><br>
+            <p class="skill-text">
+                
+                Programming — Writing computer programs for various purposes.<br>
+                Judgment and Decision Making — Considering the relative costs and benefits of potential actions to choose the most appropriate one.<br>
+                Reading Comprehension — Understanding written sentences and paragraphs in work related documents.<br>
+                Time Management — Managing one's own time and the time of others.<br>
+                Monitoring — Monitoring/Assessing performance of yourself, other individuals, or organizations to make improvements or take corrective action.<br>
+
+            </p>
+        </div>
+    </div>
+
+    <p>
+            Education: West-MEC
+            Phoenix, AZ	Grad Date: May 2021
+            Coding Program 	
+            This hands-on course covers auto refinishing, bodywork, structural damage analysis, and painting during 900 hours of classroom and lab instruction.
+            
+            SunnySlope High School	Phoenix, AZ	Grad Date: May 2021
+            GPA: 3
+            Relevant Coursework: AP Spanish, Honors Spanish, Engineering science 
+            
+            Employment / Volunteer Activities:
+            Volunteer	Phoenix, AZ	2016-2018
+            El Shaddai Church
+            Responsibilities include: Setting up tables, taking care of children, and feeding the homeless
+            
+    </p>
     
+    
+
+    <script>
+        $('.skill-per').each(function(){
+            var $this = $(this);
+            var per = $this.attr('per');
+            $this.css("width", per+'%');
+            $({animatedValue: 0}).animate({animatedValue: per},{
+                duration: 1000,
+                step: function(){
+                    $this.attr('per', Math.floor(this.animatedValue) + '%');
+                },
+                complete: function(){
+                    $this.attr('per', Math.floor(this.animatedValue) + '%')
+                }
+            });
+        });
+    </script>
+
     
 </body>
 </html>

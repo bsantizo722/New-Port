@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link  rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.js"></script>
     <title>Brandons Portfolio</title>
 </head>
-<body>
+
+<body class="full-landing-image">
     <header>
         <a class="logo" href="index.html">Brandon Santizo</a>
         <nav>
@@ -26,7 +29,9 @@
     <h2 class="line anim-typewriter">My name is Brandon Santizo</h1>
     <br>
 
+    
     <img src="code.jpg" class="code-img"  alt="code on a laptop">
+    
     <br>
     <br>
 
@@ -34,7 +39,12 @@
         Please feel free to explore my Portfolio page and reach further contact with me.
     </p>
     <br>
-
+    <script>
+        $(".full-landing-image").ripples({
+            resolution: 200,
+            perturbance: 0.04,
+        });
+    </script>
 </body>
 <footer></footer>
 </html>
